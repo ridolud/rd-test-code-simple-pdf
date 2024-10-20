@@ -163,7 +163,7 @@ export class WithholdingTaxService {
   async getPdf(file: Express.Multer.File) {
     const data = await this.getData(file.buffer);
 
-    this.pdfKit.fontSize(18).text('Bukti Potong Pajak', 30, 60);
+    this.pdfKit.fontSize(18).text('Potong Pajak Pembelian Barang', 30, 60);
 
     // H1
     this.pdfKit.fontSize(14).text('H1 :', 30, 100).text(data.h1, 70, 100);
